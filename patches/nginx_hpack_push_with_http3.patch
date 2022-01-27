@@ -463,7 +463,7 @@ index 853faefd..61e1f051 100644
 -
 -        } else {
 -            pos = ngx_cpymem(pos, nginx, sizeof(nginx));
-+            pos = ngx_http_v2_write_header_str("server", "nginx");
++            pos = ngx_http_v2_write_header_str("server", "ostrich");
          }
      }
 
