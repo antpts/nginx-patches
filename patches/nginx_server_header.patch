@@ -27,7 +27,7 @@ diff --color -ur a/src/http/ngx_http_header_filter_module.c b/src/http/ngx_http_
  
 diff --color -ur a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_filter_module.c
 --- a/src/http/v2/ngx_http_v2_filter_module.c	2022-01-28 00:08:19.555252184 +0200
-+++ b/src/http/v2/ngx_http_v2_filter_module.c	2022-01-28 00:30:29.033492823 +0200
++++ b/src/http/v2/ngx_http_v2_filter_module.c	2022-01-28 00:37:25.989133064 +0200
 @@ -191,7 +191,7 @@
      ngx_http_core_srv_conf_t  *cscf;
      u_char                     addr[NGX_SOCKADDR_STRLEN];
@@ -37,15 +37,6 @@ diff --color -ur a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_htt
  #if (NGX_HTTP_GZIP)
      static const u_char accept_encoding[12] =
          "\x8b\x84\x84\x2d\x69\x5b\x05\x44\x3c\x86\xaa\x6f";
-@@ -309,7 +309,7 @@
-             len += 1 + nginx_ver_build_len;
- 
-         } else {
--            len += 1 + sizeof(nginx);
-+            len += 1 + sizeof(ostrich);
-         }
-     }
- 
 @@ -517,7 +517,7 @@
              pos = ngx_http_v2_write_header_str("server", NGINX_VER_BUILD);
  
