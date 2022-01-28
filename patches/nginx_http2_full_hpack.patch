@@ -1,4 +1,4 @@
-# HTTP2 HPACK Encoding Support with HTTP3 support. (Cloudflare patch)
+# HTTP2 full HPACK Encoding Support. (Cloudflare patch)
 # https://blog.cloudflare.com/hpack-the-silent-killer-feature-of-http-2/
 # Source : https://raw.githubusercontent.com/hakasenyang/openssl-patch/master/nginx_hpack_push_1.15.3.patch
 # Resolve conflicts with https://raw.githubusercontent.com/cloudflare/quiche/master/extras/nginx/nginx-1.16.patch
