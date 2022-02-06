@@ -1,9 +1,6 @@
-Binary files a/.hg/dirstate and b/.hg/dirstate differ
-Only in b/.hg/wcache: checknoexec
-Only in b: nginx_server_header.patch
 diff --color -ur a/src/core/nginx.h b/src/core/nginx.h
---- a/src/core/nginx.h	2022-01-27 23:54:25.800175348 +0200
-+++ b/src/core/nginx.h	2022-01-28 00:01:10.164098684 +0200
+--- a/src/core/nginx.h	2022-02-06 21:54:07.227674619 +0200
++++ b/src/core/nginx.h	2022-02-06 21:56:32.836114481 +0200
 @@ -11,7 +11,7 @@
  
  #define nginx_version      1021006
@@ -14,8 +11,8 @@ diff --color -ur a/src/core/nginx.h b/src/core/nginx.h
  #ifdef NGX_BUILD
  #define NGINX_VER_BUILD    NGINX_VER " (" NGX_BUILD ")"
 diff --color -ur a/src/http/ngx_http_header_filter_module.c b/src/http/ngx_http_header_filter_module.c
---- a/src/http/ngx_http_header_filter_module.c	2022-01-27 23:54:25.812175239 +0200
-+++ b/src/http/ngx_http_header_filter_module.c	2022-01-28 00:02:06.747481768 +0200
+--- a/src/http/ngx_http_header_filter_module.c	2022-02-06 21:54:07.235674647 +0200
++++ b/src/http/ngx_http_header_filter_module.c	2022-02-06 21:56:32.836114481 +0200
 @@ -46,7 +46,7 @@
  };
  
@@ -25,9 +22,21 @@ diff --color -ur a/src/http/ngx_http_header_filter_module.c b/src/http/ngx_http_
  static u_char ngx_http_server_full_string[] = "Server: " NGINX_VER CRLF;
  static u_char ngx_http_server_build_string[] = "Server: " NGINX_VER_BUILD CRLF;
  
+diff --color -ur a/src/http/ngx_http_special_response.c b/src/http/ngx_http_special_response.c
+--- a/src/http/ngx_http_special_response.c	2022-02-06 21:54:07.239674660 +0200
++++ b/src/http/ngx_http_special_response.c	2022-02-06 21:58:22.192381819 +0200
+@@ -33,7 +33,7 @@
+ 
+ 
+ static u_char ngx_http_error_tail[] =
+-"<hr><center>nginx</center>" CRLF
++"<hr><center>ostrich</center>" CRLF
+ "</body>" CRLF
+ "</html>" CRLF
+ ;
 diff --color -ur a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_filter_module.c
---- a/src/http/v2/ngx_http_v2_filter_module.c	2022-01-28 00:08:19.555252184 +0200
-+++ b/src/http/v2/ngx_http_v2_filter_module.c	2022-01-28 00:37:25.989133064 +0200
+--- a/src/http/v2/ngx_http_v2_filter_module.c	2022-02-06 21:54:40.927786230 +0200
++++ b/src/http/v2/ngx_http_v2_filter_module.c	2022-02-06 21:56:32.836114481 +0200
 @@ -191,7 +191,7 @@
      ngx_http_core_srv_conf_t  *cscf;
      u_char                     addr[NGX_SOCKADDR_STRLEN];
@@ -47,8 +56,8 @@ diff --color -ur a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_htt
      }
  
 diff --color -ur a/src/http/v3/ngx_http_v3_filter_module.c b/src/http/v3/ngx_http_v3_filter_module.c
---- a/src/http/v3/ngx_http_v3_filter_module.c	2022-01-27 23:54:25.820175166 +0200
-+++ b/src/http/v3/ngx_http_v3_filter_module.c	2022-01-28 00:07:03.156137411 +0200
+--- a/src/http/v3/ngx_http_v3_filter_module.c	2022-02-06 21:54:07.243674674 +0200
++++ b/src/http/v3/ngx_http_v3_filter_module.c	2022-02-06 21:56:32.836114481 +0200
 @@ -185,7 +185,7 @@
              n = sizeof(NGINX_VER_BUILD) - 1;
  
